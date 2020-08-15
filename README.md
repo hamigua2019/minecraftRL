@@ -18,8 +18,11 @@
 
 PPO算法是一种新型的Policy Gradient算法，Policy Gradient算法对步长十分敏感，但是又难以选择合适的步长，在训练过程中新旧策略的的变化差异如果过大则不利于学习。PPO算法提出了新的目标函数可以再多个训练步骤实现小批量的更新，解决了Policy Gradient算法中步长难以确定的问题。其实，TRPO也是为了解决这个思想，但是相比于TRPO算法PPO算法更容易求解。TRPO算法的优化使用的是共轭梯度法（Conjugate Gradient），在计算梯度的时候要计算KL divergence的二阶导数，而PPO算法只需要计算一阶，这样大大减小了计算量。
 
+rainbow将深度 Q-Networks 算法的六种改进方法结合在一起，形成一个全能的网络。经过验证，比六种方法的性能都强。
 
+我们没有得出最后结果，但从竞赛官方提供的实验结果可以比较看出，rainbow和ppo各有所长。在MineRLNavigate-v0和MineRLTreechop-v0下，rainbow表现更加，但是在MineRLNavigateDense-v0下，ppo的表现更胜一筹。
 
+以下为竞赛官方提供的实验结果：
 
 MineRLNavigate-v0.txt
 Rainbow: best_score: 13.0 +- 33.63034344160047 ("+-" denotes standard deviation)
@@ -36,8 +39,20 @@ Rainbow: best_score: 66.89166902255266 +- 41.23925514895555 ("+-" denotes standa
 PPO: best_score: 87.82769563049078 +- 59.455629216295144 ("+-" denotes standard deviation)
 DDDQN: best_score: 59.134177452623845 +- 52.43237430511946 ("+-" denotes standard deviation)
 
-四、参考资料
+四、需要继续进行的工作及补充学习
+
+1. 如果有条件，将需要expert dataset的三个py文件调试实现，比较六种算法的过程结果，形成感性体验；
+
+2. 在上述基础上，思考策略，改进算法，参加比赛，与选手共同学习交流。
+
+3. 对强化学习的其他模型方法进一步巩固了解，关注领域最近动向。
+
+最后，感谢老师给予的指导、不厌其烦的答疑，感谢老师的批阅，不足之处，请多多指正，再次感谢。
+
+五、参考资料
 
 1. Joseph Modayil，Hado van Hasselt，et al，Rainbow: Combining Improvements in Deep Reinforcement Learning，2017.10，Matteo Hessel，
 
 2. John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, Oleg Klimov，OpenAI，Proximal Policy Optimization Algorithms，2017.8.
+
+3. William H. Guss，et al，NeurIPS 2019 Competition: The MineRL Competition on Sample Efficient Reinforcement Learning using Human Priors，2019.8
