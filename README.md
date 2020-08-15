@@ -12,9 +12,13 @@
 
 虽然如此，仅有一个baselines可以实现，但结合竞赛的GitHub资料和几篇相关paper，也不妨碍我们能够把握baselines模型的作用和意义。
 
+三、ppo算法与rainbow的理解及比较
+
 阅读rainbow论文、ppo论文以及，可知这几种模型的创新提升点之所在。
 
-PPO方法是对TRPO方法的改进。TRPO方法的优化使用的是共轭梯度法（Conjugate Gradient），在计算梯度的时候要计算KL divergence的二阶导数，而PPO方法只需要计算一阶，这样一来，大大减小了计算量。PPO方法。
+PPO算法是一种新型的Policy Gradient算法，Policy Gradient算法对步长十分敏感，但是又难以选择合适的步长，在训练过程中新旧策略的的变化差异如果过大则不利于学习。PPO算法提出了新的目标函数可以再多个训练步骤实现小批量的更新，解决了Policy Gradient算法中步长难以确定的问题。其实，TRPO也是为了解决这个思想，但是相比于TRPO算法PPO算法更容易求解。TRPO算法的优化使用的是共轭梯度法（Conjugate Gradient），在计算梯度的时候要计算KL divergence的二阶导数，而PPO算法只需要计算一阶，这样大大减小了计算量。
+
+
 
 
 MineRLNavigate-v0.txt
