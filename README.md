@@ -40,4 +40,4 @@ DDDQN: best_score: 59.134177452623845 +- 52.43237430511946 ("+-" denotes standar
 
 1. Joseph Modayil，Hado van Hasselt，et al，Rainbow: Combining Improvements in Deep Reinforcement Learning，2017.10，Matteo Hessel，
 
-2. 
+2. John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, Oleg Klimov，OpenAI，Proximal Policy Optimization Algorithms，2017.8.
