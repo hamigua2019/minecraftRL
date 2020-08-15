@@ -14,6 +14,8 @@
 
 阅读rainbow论文、ppo论文以及，可知这几种模型的创新提升点之所在。
 
+PPO方法是对TRPO方法的改进。TRPO方法的优化使用的是共轭梯度法（Conjugate Gradient），在计算梯度的时候要计算KL divergence的二阶导数，而PPO方法只需要计算一阶，这样一来，大大减小了计算量。PPO方法。
+
 
 MineRLNavigate-v0.txt
 Rainbow: best_score: 13.0 +- 33.63034344160047 ("+-" denotes standard deviation)
@@ -29,3 +31,9 @@ MineRLNavigateDense-v0.txt
 Rainbow: best_score: 66.89166902255266 +- 41.23925514895555 ("+-" denotes standard deviation)
 PPO: best_score: 87.82769563049078 +- 59.455629216295144 ("+-" denotes standard deviation)
 DDDQN: best_score: 59.134177452623845 +- 52.43237430511946 ("+-" denotes standard deviation)
+
+四、参考资料
+
+1. Joseph Modayil，Hado van Hasselt，et al，Rainbow: Combining Improvements in Deep Reinforcement Learning，2017.10，Matteo Hessel，
+
+2. 
